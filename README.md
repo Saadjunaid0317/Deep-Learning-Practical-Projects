@@ -100,7 +100,7 @@ Tested with: Python 3.13, torch 2.15.0, scikit-learn 1.7.2, pandas 2.3.3, numpy 
 - **Big:** training loss falls to about 0 while validation loss turns back up after epoch 84 → **overfitting** (it memorises the 200 images).
 - **Big + dropout + decay:** the lowest validation loss; it stopped itself at epoch 187, 113 epochs early.
 
-**Decision:** ship the **big + dropout + weight decay** model (best checkpoint, epoch 157). It has the lowest validation loss and the best test accuracy, but it beats the plain big model by only 0.3 points. The real limit is the 200 training images, so **more labelled data (or augmentation) would help most next**, not more tuning.
+**My decision:** I would ship the **big model with dropout and weight decay** (the saved checkpoint from epoch 157), because it has the lowest validation loss (0.234) and the highest test accuracy (0.937). The win is very small, only 0.3 points over the plain big model, and both big models almost memorised the 200 training images, so the thing that would help most next is **more labelled digits**, not more tuning.
 
 Extra graphs saved by the notebook:
 
