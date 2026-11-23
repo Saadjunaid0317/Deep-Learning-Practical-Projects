@@ -1,0 +1,20 @@
+# Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Model checkpoints are re-created by running the notebooks
+*.pt
+
+# Course material (not my work, not part of the submission)
+*.pptx
+
+# Colab tunnel files (Project 5, Part C)
+cloudflared
+*.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
